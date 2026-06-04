@@ -29,3 +29,24 @@ class Car:
 def main():
     print("[INFO] Initializing Car Telemetry TestBench...")
     print("-" * 50)
+
+my_car = Car(2026, "CyberTruck")
+
+    print("PHASE 01: ACCELERATION SIMULATION")
+    for step in range(1, 6):
+        my_car.accelerate()
+        print(f" -> Acceleration Cycle {step}: Current Speed = {my_car.get_speed()} km/h")
+
+    print("-" * 50)
+
+    print("PHASE 02: BRAKING SIMULATION")
+    for step in range(1, 6):
+        my_car.brake()
+        print(f" -> Braking Cycle {step}     : Current Speed = {my_car.get_speed()} km/h")
+
+    print("-" * 50)
+    print("[INFO] Simulation Complete. System Status: Nominal.")
+
+
+if __name__ == "__main__":
+    main()
