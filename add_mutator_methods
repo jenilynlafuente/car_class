@@ -1,0 +1,23 @@
+class Car:
+    def __init__(self, year_model: int, make: str):
+        """
+        Constructor initializes the object attributes.
+        Using double underscores (__) to enforce private data fields.
+        """
+        self.__year_model = int(year_model)
+        self.__make = str(make)
+        self.__speed = 0  # Initial velocity vector is zero at rest
+
+    def accelerate(self):
+        """Increments the car speed by 5 units."""
+        self.__speed += 5
+
+    def brake(self):
+        """
+        Decrements the car speed by 5 units.
+        Includes a safety floor to prevent negative speed values.
+        """
+        if self.__speed >= 5:
+            self.__speed -= 5
+        else:
+            self.__speed = 0
