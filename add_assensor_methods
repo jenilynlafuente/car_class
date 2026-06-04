@@ -21,3 +21,11 @@ class Car:
             self.__speed -= 5
         else:
             self.__speed = 0
+
+    def get_speed(self) -> int:
+        """Returns the current speed value."""
+        return self.__speed
+
+def main():
+    print("[INFO] Initializing Car Telemetry TestBench...")
+    print("-" * 50)
